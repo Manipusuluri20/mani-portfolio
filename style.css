@@ -288,3 +288,98 @@ nav a.active {
         margin-right: 10px;
     }
 }
+/* -----------------------------
+   HOME SECTION (MAHESH STYLE)
+------------------------------*/
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.home-container {
+    max-width: 800px;
+    margin: auto;
+    color: white;
+}
+
+.main-title {
+    font-size: 55px;
+    font-weight: 900;
+    background: linear-gradient(to right, #9b4dff, #00eaff);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    font-size: 26px;
+    color: #00eaff;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.home-desc {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Gradient Button */
+.gradient-btn {
+    background: linear-gradient(to right, #9b4dff, #00eaff);
+    padding: 12px 28px;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.gradient-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Outline Button */
+.outline-btn {
+    border: 2px solid #00eaff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    color: #00eaff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.outline-btn:hover {
+    background: #00eaff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: #00eaff;
+    font-size: 28px;
+    margin: 0 12px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.2);
+}
