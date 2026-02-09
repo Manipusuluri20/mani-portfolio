@@ -1,224 +1,234 @@
-<!DOCTYPE html>
-<html lang="en">
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+body {
+    background: #0d0d0d;
+    color: white;
+    scroll-behavior: smooth;
+}
 
-    <title>Pusuluri Mani Krishna | Aspiring Data Analyst</title>
+section {
+    padding: 80px 12%;
+    min-height: 100vh;
+}
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css" />
+/* NAVBAR */
+header {
+    width: 100%;
+    padding: 20px 12%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    z-index: 1000;
+}
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00eaff;
+}
 
-<body>
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 16px;
+}
 
-    <!-- SIDE NAVIGATION DOTS -->
-    <div class="side-nav">
-        <a href="#home" class="dot active"></a>
-        <a href="#about" class="dot"></a>
-        <a href="#skills" class="dot"></a>
-        <a href="#projects" class="dot"></a>
-        <a href="#experience" class="dot"></a>
-        <a href="#education" class="dot"></a>
-        <a href="#certifications" class="dot"></a>
-        <a href="#contact" class="dot"></a>
-    </div>
+nav a:hover {
+    color: #00eaff;
+}
 
-    <!-- NAVBAR -->
-    <header>
-        <div class="logo">MANI KRISHNA</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+/* SIDE NAV DOTS */
+.side-nav {
+    position: fixed;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
 
-    <!-- HOME SECTION -->
-    <section id="home">
-        <div class="home-container">
+.side-nav .dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 14px 0;
+    border-radius: 50%;
+    background: #555;
+    transition: 0.3s;
+}
 
-            <h1 class="main-title">PUSULURI MANI KRISHNA</h1>
+.side-nav .dot.active,
+.side-nav .dot:hover {
+    background: #00eaff;
+}
 
-            <h2 class="sub-title">Aspiring Data Analyst</h2>
+/* HOME SECTION */
+#home {
+    text-align: center;
+    padding-top: 140px;
+}
 
-            <p class="home-desc">
-                Detail-oriented Data Analyst skilled in Python, SQL, Power BI, Excel,
-                and data visualization. Passionate about transforming raw data into
-                meaningful insights.
-            </p>
+.main-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #8a2be2, #00eaff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
-            <div class="home-buttons">
-                <a href="RESUME.pdf" class="gradient-btn" target="_blank">View Resume</a>
-                <a href="#contact" class="outline-btn">Contact Me</a>
-            </div>
+.sub-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #00eaff;
+}
 
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/mani-pusuluri-9b4211257/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/Manipusuluri20" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:pusulurimani@gmail.com">
-                    <i class="fa fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+.home-desc {
+    max-width: 700px;
+    margin: auto;
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
 
-    <!-- ABOUT -->
-    <section id="about" class="section about">
-        <h2>About Me</h2>
-        <p>
-            I am a detail-oriented Data Analyst skilled in Python, SQL, Power BI, Excel,
-            and Exploratory Data Analysis. I enjoy discovering insights, building dashboards,
-            and solving business problems through data storytelling.
-        </p>
-    </section>
+.home-buttons {
+    margin-top: 20px;
+}
 
-    <!-- SKILLS -->
-    <section id="skills" class="section skills">
-        <h2>Technical Skills</h2>
+.gradient-btn {
+    padding: 12px 28px;
+    background: linear-gradient(to right, #8a2be2, #00eaff);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-right: 15px;
+    text-decoration: none;
+}
 
-        <div class="skills-grid">
+.outline-btn {
+    padding: 12px 28px;
+    border: 2px solid #00eaff;
+    color: #00eaff;
+    border-radius: 8px;
+    text-decoration: none;
+}
 
-            <div class="skill-card">
-                <h3>Programming</h3>
-                <p>Python, SQL</p>
-            </div>
+.gradient-btn:hover,
+.outline-btn:hover {
+    opacity: 0.8;
+}
 
-            <div class="skill-card">
-                <h3>Python Libraries</h3>
-                <p>Pandas, NumPy, Matplotlib, Seaborn</p>
-            </div>
+/* SOCIAL ICONS */
+.social-icons {
+    margin-top: 25px;
+}
 
-            <div class="skill-card">
-                <h3>Tools & Platforms</h3>
-                <p>Power BI, Excel, Git, Jupyter Notebook, MySQL</p>
-            </div>
+.social-icons i {
+    font-size: 26px;
+    margin: 0 12px;
+    color: #00eaff;
+    cursor: pointer;
+}
 
-            <div class="skill-card">
-                <h3>Core Areas</h3>
-                <p>EDA, Data Cleaning, Visualization, Dashboarding, Insights</p>
-            </div>
+.social-icons i:hover {
+    color: white;
+}
 
-        </div>
-    </section>
+/* SECTION TITLES */
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #00eaff;
+}
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section projects">
-        <h2>Projects</h2>
+/* ABOUT */
+.about p {
+    max-width: 800px;
+    line-height: 1.7;
+    font-size: 18px;
+    color: #ccc;
+}
 
-        <div class="project-card">
-            <h3>Web Scraping & Exploratory Data Analysis</h3>
-            <p>
-                Built an end-to-end data pipeline by scraping structured information using Python, BeautifulSoup/Selenium.
-                Cleaned and transformed scraped data using Pandas. Performed EDA and visualized insights using Matplotlib
-                & Seaborn to identify trends and correlations.
-            </p>
-        </div>
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
 
-        <div class="project-card">
-            <h3>Employee Management System (SQL)</h3>
-            <p>
-                Designed an 8-table relational database with primary/foreign keys. Executed 20+ SQL queries including joins,
-                subqueries, and aggregations to analyze employee roles & salary distribution. Improved performance via
-                normalization.
-            </p>
-        </div>
+.skill-card {
+    padding: 25px;
+    background: #111;
+    border-left: 3px solid #00eaff;
+    border-radius: 10px;
+}
 
-        <div class="project-card">
-            <h3>Global EV Sales Analysis (2010–2024) — Power BI</h3>
-            <p>
-                Built 4+ interactive dashboards with 12+ visuals to analyze EV adoption. Performed advanced DAX time-series
-                analysis to find top regions, growth trends, and fast-growing powertrain types.
-            </p>
-        </div>
-    </section>
+.skill-card h3 {
+    margin-bottom: 10px;
+    color: #00eaff;
+}
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section experience">
-        <h2>Experience</h2>
+/* PROJECTS CARD */
+.project-card {
+    padding: 25px;
+    margin-bottom: 20px;
+    background: #111;
+    border-left: 3px solid #00eaff;
+    border-radius: 10px;
+}
 
-        <div class="project-card">
-            <h3>Innomatics Research Labs — Data Analyst Intern</h3>
-            <p><b>Hyderabad | July 2025 – November 2025</b></p>
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #00eaff;
+}
 
-            <ul>
-                <li>Utilized Python and SQL to clean, preprocess, and structure large datasets for analytical tasks.</li>
-                <li>Created interactive dashboards using Power BI to communicate insights.</li>
-                <li>Conducted EDA to identify trends, patterns, and anomalies.</li>
-                <li>Applied statistical techniques to measure performance metrics & data quality.</li>
-                <li>Prepared documentation for datasets, scripts, and workflows.</li>
-                <li>Automated data validation & reporting using Excel & Power BI.</li>
-                <li>Collaborated with teams to present insights and support discussions.</li>
-            </ul>
-        </div>
-    </section>
+.project-card p {
+    color: #ccc;
+    line-height: 1.6;
+}
 
-    <!-- EDUCATION -->
-    <section id="education" class="section education">
-        <h2>Education</h2>
+/* EXPERIENCE LIST */
+.project-card ul li {
+    margin-bottom: 8px;
+    color: #ccc;
+}
 
-        <div class="project-card">
-            <h3>B.Tech — TKR College of Engineering</h3>
-            <p><b>CGPA: 7.54 | Year: 2025</b></p>
-        </div>
+/* CONTACT SECTION */
+.contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
-        <div class="project-card">
-            <h3>Intermediate — Sri Chaitanya Junior College</h3>
-            <p><b>Marks: 754 | Year: 2021</b></p>
-        </div>
+.contact a {
+    color: #00eaff;
+}
 
-        <div class="project-card">
-            <h3>SSC — MRG KKR</h3>
-            <p><b>GPA: 8.7 | Year: 2019</b></p>
-        </div>
-    </section>
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="section certs">
-        <h2>Certifications</h2>
+    nav {
+        display: none;
+    }
 
-        <div class="project-card">
-            <h3>Data Analyst Certification</h3>
-            <p>Innomatics Research Labs</p>
-        </div>
+    header {
+        justify-content: center;
+    }
 
-        <div class="project-card">
-            <h3>SQL Certification</h3>
-            <p>Completed Hands-on SQL Training</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Power BI Certification</h3>
-            <p>Dashboarding & DAX expertise</p>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
-        <h2>Contact Me</h2>
-
-        <p>Email: <b>pusulurimani@gmail.com</b></p>
-        <p>Location: Hyderabad, Telangana</p>
-        <p>LinkedIn:
-            <a href="https://www.linkedin.com/in/mani-pusuluri-9b4211257/" target="_blank">Click Here</a>
-        </p>
-    </section>
-
-    <script src="script.js"></script>
-
-</body>
-</html>
+    .side-nav {
+        display: none;
+    }
+}
