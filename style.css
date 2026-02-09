@@ -1,0 +1,153 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0e0e0e;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #00eaff;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    width: 100%;
+    background: #1a1a1a;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00eaff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00eaff;
+}
+
+header nav a {
+    margin-left: 25px;
+    font-size: 16px;
+    color: white;
+}
+
+header nav a:hover {
+    color: #00eaff;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.profile-photo {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 4px solid #00eaff;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.hero h3 {
+    font-size: 20px;
+    color: #00eaff;
+}
+
+.summary {
+    max-width: 650px;
+    margin: 15px auto;
+    line-height: 1.6;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===== BUTTONS ===== */
+.btn, .btn-outline {
+    padding: 10px 25px;
+    border-radius: 4px;
+    margin: 10px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn {
+    background: #00eaff;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #00bcd4;
+}
+
+.btn-outline {
+    border: 2px solid #00eaff;
+    color: #00eaff;
+}
+
+.btn-outline:hover {
+    background: #00eaff;
+    color: #000;
+}
+
+/* ===== SECTIONS ===== */
+.section-card {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #1a1a1a;
+    border-left: 4px solid #00eaff;
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+.section-card h2 {
+    color: #00eaff;
+    margin-bottom: 15px;
+}
+
+/* ===== SKILLS GRID ===== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-box {
+    background: #111;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #00eaff;
+}
+
+/* ===== PROJECT GRID ===== */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.project-box {
+    background: #111;
+    padding: 15px;
+    border-left: 4px solid #00eaff;
+    border-radius: 6px;
+}
