@@ -1,55 +1,36 @@
-// ----------------------------------------------
-// SMOOTH SCROLL FOR NAV LINKS & DOTS
-// ----------------------------------------------
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", function (e) {
+// Highlight Active Dot on Scroll
+const sections = document.querySelectorAll("section");
+const navDots = document.querySelectorAll(".side-nav .dot");
+
+function activateDot() {
+    let scrollPos = window.pageYOffset + 150;
+
+    sections.forEach((sec, index) => {
+        if (scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
+
+            navDots.forEach(dot => dot.classList.remove("active"));
+            navDots[index].classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", activateDot);
+
+
+// Smooth Scroll for Side Nav Dots (mobile-safe)
+navDots.forEach((dot, index) => {
+    dot.addEventListener("click", function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+        sections[index].scrollIntoView({ behavior: "smooth" });
     });
 });
 
 
-// ----------------------------------------------
-// SECTIONS + DOT NAV + NAVBAR LINK ACTIVATION
-// ----------------------------------------------
-const sections = document.querySelectorAll("section");
-const dots = document.querySelectorAll(".dot");
-const navLinks = document.querySelectorAll("header nav a");
-
-function activateOnScroll() {
-    let index = sections.length;
-
-    // Find active section
-    while (--index && window.scrollY + 200 < sections[index].offsetTop) {}
-
-    // Update dots
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-
-    // Update navbar links
-    navLinks.forEach(nav => nav.classList.remove("active"));
-    navLinks[index].classList.add("active");
-}
-
-activateOnScroll();
-window.addEventListener("scroll", activateOnScroll);
-
-
-// ----------------------------------------------
-// SECTION FADE-IN ANIMATION
-// ----------------------------------------------
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
+// Smooth Scroll for Navbar Links
+document.querySelectorAll("header nav a").forEach(link => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        target.scrollIntoView({ behavior: "smooth" });
     });
-}, { threshold: 0.2 });
-
-sections.forEach(section => {
-    section.classList.add("hidden");
-    observer.observe(section);
 });
