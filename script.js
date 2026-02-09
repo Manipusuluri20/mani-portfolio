@@ -1,6 +1,8 @@
-// Smooth Scroll for All Anchor Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
+// ----------------------------------------------
+// SMOOTH SCROLL FOR NAV LINKS & DOTS
+// ----------------------------------------------
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute("href")).scrollIntoView({
             behavior: "smooth",
@@ -10,43 +12,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// Side Dot Navigation Active State Handler
+// ----------------------------------------------
+// SECTIONS + DOT NAV + NAVBAR LINK ACTIVATION
+// ----------------------------------------------
 const sections = document.querySelectorAll("section");
 const dots = document.querySelectorAll(".dot");
-
-function activateDot() {
-    let index = sections.length;
-
-    while (--index && window.scrollY + 200 < sections[index].offsetTop) {}
-
-    dots.forEach((dot) => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-}
-
-activateDot();
-window.addEventListener("scroll", activateDot);
-
-
-
-// Navbar auto active highlight
 const navLinks = document.querySelectorAll("header nav a");
 
-function highlightNav() {
-    let idx = sections.length;
+function activateOnScroll() {
+    let index = sections.length;
 
-    while (--idx && window.scrollY + 150 < sections[idx].offsetTop) {}
+    // Find active section
+    while (--index && window.scrollY + 200 < sections[index].offsetTop) {}
 
-    navLinks.forEach((a) => a.classList.remove("active"));
-    navLinks[idx].classList.add("active");
+    // Update dots
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+
+    // Update navbar links
+    navLinks.forEach(nav => nav.classList.remove("active"));
+    navLinks[index].classList.add("active");
 }
 
-highlightNav();
-window.addEventListener("scroll", highlightNav);
+activateOnScroll();
+window.addEventListener("scroll", activateOnScroll);
 
 
-
-// Fade-in animation for each section
-const observer = new IntersectionObserver((entries) => {
+// ----------------------------------------------
+// SECTION FADE-IN ANIMATION
+// ----------------------------------------------
+const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add("visible");
