@@ -1,385 +1,224 @@
-/* ---------------------------------------
-   GLOBAL
------------------------------------------*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-html {
-    scroll-behavior: smooth;
-}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-body {
-    background: #0d0d0d;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-}
+    <title>Pusuluri Mani Krishna | Aspiring Data Analyst</title>
 
-/* ---------------------------------------
-   NAVBAR
------------------------------------------*/
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(10, 10, 10, 0.9);
-    border-bottom: 1px solid #00e5ff;
-    padding: 15px 0;
-    z-index: 1000;
-}
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-.logo {
-    font-size: 24px;
-    margin-left: 40px;
-    color: #00e5ff;
-    font-weight: bold;
-}
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+<body>
 
-nav a {
-    margin-right: 40px;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 17px;
-}
+    <!-- SIDE NAVIGATION DOTS -->
+    <div class="side-nav">
+        <a href="#home" class="dot active"></a>
+        <a href="#about" class="dot"></a>
+        <a href="#skills" class="dot"></a>
+        <a href="#projects" class="dot"></a>
+        <a href="#experience" class="dot"></a>
+        <a href="#education" class="dot"></a>
+        <a href="#certifications" class="dot"></a>
+        <a href="#contact" class="dot"></a>
+    </div>
 
-nav a:hover,
-nav a.active {
-    color: #00e5ff;
-}
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">MANI KRISHNA</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-/* ---------------------------------------
-   SIDE DOT NAVIGATION
------------------------------------------*/
-.side-nav {
-    position: fixed;
-    left: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    z-index: 999;
-}
+    <!-- HOME SECTION -->
+    <section id="home">
+        <div class="home-container">
 
-.dot {
-    width: 13px;
-    height: 13px;
-    background: #555;
-    border-radius: 50%;
-    display: block;
-    transition: 0.3s;
-}
+            <h1 class="main-title">PUSULURI MANI KRISHNA</h1>
 
-.dot:hover,
-.dot.active {
-    background: #00e5ff;
-    transform: scale(1.3);
-}
+            <h2 class="sub-title">Aspiring Data Analyst</h2>
 
-/* ---------------------------------------
-   SECTION BASE STYLES
------------------------------------------*/
-.section {
-    width: 75%;
-    margin: auto;
-    padding-top: 130px;
-    padding-bottom: 80px;
-}
+            <p class="home-desc">
+                Detail-oriented Data Analyst skilled in Python, SQL, Power BI, Excel,
+                and data visualization. Passionate about transforming raw data into
+                meaningful insights.
+            </p>
 
-.section h2 {
-    font-size: 32px;
-    color: #00e5ff;
-    margin-bottom: 25px;
-}
+            <div class="home-buttons">
+                <a href="RESUME.pdf" class="gradient-btn" target="_blank">View Resume</a>
+                <a href="#contact" class="outline-btn">Contact Me</a>
+            </div>
 
-/* ---------------------------------------
-   HOME SECTION
------------------------------------------*/
-.home {
-    text-align: center;
-    margin-top: 100px;
-}
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mani-pusuluri-9b4211257/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Manipusuluri20" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:pusulurimani@gmail.com">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-.profile-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 3px solid #00e5ff;
-    margin-bottom: 20px;
-}
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+        <h2>About Me</h2>
+        <p>
+            I am a detail-oriented Data Analyst skilled in Python, SQL, Power BI, Excel,
+            and Exploratory Data Analysis. I enjoy discovering insights, building dashboards,
+            and solving business problems through data storytelling.
+        </p>
+    </section>
 
-.home h1 {
-    font-size: 38px;
-}
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+        <h2>Technical Skills</h2>
 
-.home h3 {
-    font-size: 22px;
-    color: #00e5ff;
-    margin: 10px 0;
-}
+        <div class="skills-grid">
 
-.intro-text {
-    width: 60%;
-    margin: 20px auto;
-    font-size: 18px;
-    line-height: 1.7;
-    opacity: 0.85;
-}
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>Python, SQL</p>
+            </div>
 
-.home-buttons {
-    margin-top: 15px;
-}
+            <div class="skill-card">
+                <h3>Python Libraries</h3>
+                <p>Pandas, NumPy, Matplotlib, Seaborn</p>
+            </div>
 
-.btn,
-.btn-outline {
-    padding: 10px 25px;
-    border-radius: 4px;
-    font-size: 16px;
-    margin: 8px;
-    display: inline-block;
-    text-decoration: none;
-}
+            <div class="skill-card">
+                <h3>Tools & Platforms</h3>
+                <p>Power BI, Excel, Git, Jupyter Notebook, MySQL</p>
+            </div>
 
-.btn {
-    background: #00e5ff;
-    color: black;
-    font-weight: bold;
-}
+            <div class="skill-card">
+                <h3>Core Areas</h3>
+                <p>EDA, Data Cleaning, Visualization, Dashboarding, Insights</p>
+            </div>
 
-.btn:hover {
-    background: #00bcd4;
-}
+        </div>
+    </section>
 
-.btn-outline {
-    border: 2px solid #00e5ff;
-    color: #00e5ff;
-}
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+        <h2>Projects</h2>
 
-.btn-outline:hover {
-    background: #00e5ff;
-    color: #000;
-}
+        <div class="project-card">
+            <h3>Web Scraping & Exploratory Data Analysis</h3>
+            <p>
+                Built an end-to-end data pipeline by scraping structured information using Python, BeautifulSoup/Selenium.
+                Cleaned and transformed scraped data using Pandas. Performed EDA and visualized insights using Matplotlib
+                & Seaborn to identify trends and correlations.
+            </p>
+        </div>
 
-/* ---------------------------------------
-   ABOUT SECTION
------------------------------------------*/
-.about p {
-    font-size: 18px;
-    line-height: 1.7;
-    opacity: 0.85;
-    width: 90%;
-}
+        <div class="project-card">
+            <h3>Employee Management System (SQL)</h3>
+            <p>
+                Designed an 8-table relational database with primary/foreign keys. Executed 20+ SQL queries including joins,
+                subqueries, and aggregations to analyze employee roles & salary distribution. Improved performance via
+                normalization.
+            </p>
+        </div>
 
-/* ---------------------------------------
-   SKILLS SECTION
------------------------------------------*/
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
+        <div class="project-card">
+            <h3>Global EV Sales Analysis (2010–2024) — Power BI</h3>
+            <p>
+                Built 4+ interactive dashboards with 12+ visuals to analyze EV adoption. Performed advanced DAX time-series
+                analysis to find top regions, growth trends, and fast-growing powertrain types.
+            </p>
+        </div>
+    </section>
 
-.skill-card {
-    background: #111;
-    padding: 20px;
-    border-left: 3px solid #00e5ff;
-    border-radius: 6px;
-}
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section experience">
+        <h2>Experience</h2>
 
-.skill-card h3 {
-    margin-bottom: 10px;
-    color: #00e5ff;
-}
+        <div class="project-card">
+            <h3>Innomatics Research Labs — Data Analyst Intern</h3>
+            <p><b>Hyderabad | July 2025 – November 2025</b></p>
 
-.skill-card p {
-    opacity: 0.85;
-}
+            <ul>
+                <li>Utilized Python and SQL to clean, preprocess, and structure large datasets for analytical tasks.</li>
+                <li>Created interactive dashboards using Power BI to communicate insights.</li>
+                <li>Conducted EDA to identify trends, patterns, and anomalies.</li>
+                <li>Applied statistical techniques to measure performance metrics & data quality.</li>
+                <li>Prepared documentation for datasets, scripts, and workflows.</li>
+                <li>Automated data validation & reporting using Excel & Power BI.</li>
+                <li>Collaborated with teams to present insights and support discussions.</li>
+            </ul>
+        </div>
+    </section>
 
-/* ---------------------------------------
-   PROJECTS SECTION
------------------------------------------*/
-.project-card {
-    background: #111;
-    padding: 20px;
-    border-left: 3px solid #00e5ff;
-    border-radius: 6px;
-    margin-bottom: 25px;
-    transition: 0.3s;
-}
+    <!-- EDUCATION -->
+    <section id="education" class="section education">
+        <h2>Education</h2>
 
-.project-card:hover {
-    transform: scale(1.03);
-}
+        <div class="project-card">
+            <h3>B.Tech — TKR College of Engineering</h3>
+            <p><b>CGPA: 7.54 | Year: 2025</b></p>
+        </div>
 
-/* ---------------------------------------
-   EXPERIENCE SECTION
------------------------------------------*/
-.experience ul li {
-    margin: 8px 0;
-    opacity: 0.85;
-}
+        <div class="project-card">
+            <h3>Intermediate — Sri Chaitanya Junior College</h3>
+            <p><b>Marks: 754 | Year: 2021</b></p>
+        </div>
 
-/* ---------------------------------------
-   EDUCATION / CERTIFICATIONS
------------------------------------------*/
-.project-card h3 {
-    color: #00e5ff;
-}
+        <div class="project-card">
+            <h3>SSC — MRG KKR</h3>
+            <p><b>GPA: 8.7 | Year: 2019</b></p>
+        </div>
+    </section>
 
-/* ---------------------------------------
-   CONTACT
------------------------------------------*/
-.contact p {
-    font-size: 18px;
-    margin: 8px 0;
-}
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section certs">
+        <h2>Certifications</h2>
 
-.contact a {
-    color: #00e5ff;
-}
+        <div class="project-card">
+            <h3>Data Analyst Certification</h3>
+            <p>Innomatics Research Labs</p>
+        </div>
 
-.contact a:hover {
-    text-decoration: underline;
-}
+        <div class="project-card">
+            <h3>SQL Certification</h3>
+            <p>Completed Hands-on SQL Training</p>
+        </div>
 
-/* ---------------------------------------
-   FADE ANIMATIONS
------------------------------------------*/
-.hidden {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease-out;
-}
+        <div class="project-card">
+            <h3>Power BI Certification</h3>
+            <p>Dashboarding & DAX expertise</p>
+        </div>
+    </section>
 
-.visible {
-    opacity: 1;
-    transform: translateY(0px);
-}
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+        <h2>Contact Me</h2>
 
-/* ---------------------------------------
-   RESPONSIVE
------------------------------------------*/
-@media (max-width: 900px) {
-    .section {
-        width: 90%;
-    }
-    .intro-text {
-        width: 90%;
-    }
-}
+        <p>Email: <b>pusulurimani@gmail.com</b></p>
+        <p>Location: Hyderabad, Telangana</p>
+        <p>LinkedIn:
+            <a href="https://www.linkedin.com/in/mani-pusuluri-9b4211257/" target="_blank">Click Here</a>
+        </p>
+    </section>
 
-@media (max-width: 600px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    .profile-img {
-        width: 150px;
-        height: 150px;
-    }
-    nav a {
-        margin-right: 10px;
-    }
-}
-/* -----------------------------
-   HOME SECTION (MAHESH STYLE)
-------------------------------*/
-#home {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 80px;
-}
+    <script src="script.js"></script>
 
-.home-container {
-    max-width: 800px;
-    margin: auto;
-    color: white;
-}
-
-.main-title {
-    font-size: 55px;
-    font-weight: 900;
-    background: linear-gradient(to right, #9b4dff, #00eaff);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 10px;
-}
-
-.sub-title {
-    font-size: 26px;
-    color: #00eaff;
-    font-weight: 600;
-    margin-bottom: 25px;
-}
-
-.home-desc {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 35px;
-}
-
-.home-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Gradient Button */
-.gradient-btn {
-    background: linear-gradient(to right, #9b4dff, #00eaff);
-    padding: 12px 28px;
-    border-radius: 8px;
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.gradient-btn:hover {
-    transform: scale(1.05);
-}
-
-/* Outline Button */
-.outline-btn {
-    border: 2px solid #00eaff;
-    padding: 12px 28px;
-    border-radius: 8px;
-    color: #00eaff;
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.outline-btn:hover {
-    background: #00eaff;
-    color: #000;
-    transform: scale(1.05);
-}
-
-/* Social Icons */
-.social-icons {
-    margin-top: 30px;
-}
-
-.social-icons a {
-    color: #00eaff;
-    font-size: 28px;
-    margin: 0 12px;
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    color: white;
-    transform: scale(1.2);
-}
+</body>
+</html>
