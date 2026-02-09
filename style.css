@@ -256,3 +256,21 @@ nav a:hover {
         height: 150px;
     }
 }
+/* Fade Animation */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* Active navbar link */
+header nav a.active {
+    color: #00e5ff;
+    font-weight: bold;
+}
+
