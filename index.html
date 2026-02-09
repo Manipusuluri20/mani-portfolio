@@ -3,55 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mani Krishna | Portfolio</title>
+    <title>Mani Krishna | Data Analyst</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
+    <!-- NAVBAR -->
     <header>
-        <div class="logo">MANI KRISHNA</div>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <div class="logo">MANI KRISHNA</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <img src="mani.png" alt="profile" class="profile-photo">
-
+    <!-- HOME -->
+    <section id="home" class="home-section">
+        <img src="mani.png" class="profile-pic" alt="Mani Krishna">
         <h1>PUSULURI MANI KRISHNA</h1>
-        <h3>Aspiring Data Analyst</h3>
+        <h2>Aspiring Data Analyst</h2>
 
-        <p class="summary">
+        <p class="intro-text">
             Motivated Data Analyst skilled in Python, SQL, Power BI, Excel, and Data Visualization.
-            Passionate about cleaning data, performing EDA, creating dashboards, and helping
-            businesses make better data-driven decisions.
+            Passionate about cleaning data, performing EDA, creating dashboards, and helping businesses make
+            data-driven decisions.
         </p>
 
-        <div class="hero-buttons">
+        <div class="buttons">
             <a href="RESUME.pdf" target="_blank" class="btn">View Resume</a>
-            <a href="#contact" class="btn-outline">Contact Me</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section-card">
+    <!-- ABOUT -->
+    <section id="about" class="section">
         <h2>About Me</h2>
         <p>
-            I am a detail-oriented Data Analyst with strong foundations in Python, SQL, Power BI, Excel, 
-            and data exploration. I enjoy transforming complex datasets into meaningful insights, 
+            I am a detail-oriented Data Analyst with strong foundations in Python, SQL, Power BI,
+            Excel, and data exploration. I enjoy transforming complex datasets into meaningful insights,
             identifying trends, and creating clean visual dashboards to support business decisions.
         </p>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section-card">
+    <!-- SKILLS -->
+    <section id="skills" class="section">
         <h2>Technical Skills</h2>
 
         <div class="skills-grid">
@@ -79,38 +80,34 @@
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section-card">
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
         <h2>Projects</h2>
 
-        <div class="project-grid">
-
-            <div class="project-box">
-                <h3>Flipkart Bicycle Data — Web Scraping + EDA</h3>
-                <p>Extracted product data, cleaned and analyzed bicycle pricing, ratings, 
-                and customer reviews. Visualized insights and trends using Python.</p>
-            </div>
-
-            <div class="project-box">
-                <h3>Employee Management System — SQL</h3>
-                <p>Designed relational database, performed joins, grouping, filtering, 
-                and analyzed employee salary breakdown and department performance.</p>
-            </div>
-
-            <div class="project-box">
-                <h3>Global EV Sales Dashboard — Power BI</h3>
-                <p>Created interactive dashboard using EV sales data. Performed DAX calculations
-                and visual analysis for adoption trends, country-wise performance, and powertrain growth.</p>
-            </div>
-
+        <div class="project-box">
+            <h3>Flipkart Bicycle Data — Web Scraping + EDA</h3>
+            <p>Extracted product data, cleaned and analyzed bicycle pricing, ratings, and customer reviews.
+               Visualized insights and trends using Python.</p>
         </div>
+
+        <div class="project-box">
+            <h3>Employee Management System — SQL</h3>
+            <p>Designed relational database, performed joins, grouping, filtering, and analyzed employee salary
+               breakdown and department performance.</p>
+        </div>
+
+        <div class="project-box">
+            <h3>Global EV Sales Dashboard — Power BI</h3>
+            <p>Built interactive dashboard using EV sales data. Performed DAX calculations and visual analytics
+               for adoption trends and powertrain growth.</p>
+        </div>
+
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section-card">
+    <!-- CONTACT -->
+    <section id="contact" class="section">
         <h2>Contact Me</h2>
-
-        <p>Email: pusulurimani@gmail.com</p>
+        <p>Email: pusuluri.mani@gmail.com</p>
         <p>Location: Hyderabad, Telangana</p>
         <p>LinkedIn: 
             <a href="https://www.linkedin.com/in/mani-pusuluri-9b4211257/" target="_blank">
